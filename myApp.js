@@ -12,7 +12,8 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(middleware);
 
 app.get("/", (req, res) => {
-  res.sendFile(absolutePath);
+  //res.sendFile(absolutePath);
+  res.send("Hello Express");
 });
 
 app.get("/json", (req, res) => {
