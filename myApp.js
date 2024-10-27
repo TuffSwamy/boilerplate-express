@@ -31,10 +31,12 @@ app.get("/:word/echo", function(req,res){
   res.json({echo: req.params.word});
 });
 
-app.get("/name", function(req,res){
-  var firstname = req.query.first;
-  var lastname = req.query.last;
-  res.json({name:'${firstname} ${lastname}'}); 
+app.get("/name", function(req, res) {
+  var firstName = req.query.first;
+  var lastName = req.query.last;
+  res.json({
+    name: `${firstName} ${lastName}`
+  });
 });
 
 module.exports = app;
